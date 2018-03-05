@@ -12,7 +12,8 @@ class Forme extends JComponent {
 		Image img = icon.getImage();// crée un objet  image 
 		Graphics sndpinceau = pinceau.create();
 		if(this.isOpaque()){
-			sndpinceau.setColor(bad);
+			// on repeint toute la surface avec la couleur de fond
+			secondPinceau.setColor(this.getBackground());
       		sndpinceau.fillRect(0, 0, this.getWidth(), this.getHeight());
 		}
 	sndpinceau.setColor(bad);
