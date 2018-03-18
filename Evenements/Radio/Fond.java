@@ -13,7 +13,7 @@ public class Fond implements ActionListener {
 	 	}else if(txt=="Jaune") {
 	 		panneau.setBackground(Color.YELLOW);
 	 	}
-	 }
+	 	}
 
 	 public Fond(JPanel pan){
 	 	this.panneau =pan;

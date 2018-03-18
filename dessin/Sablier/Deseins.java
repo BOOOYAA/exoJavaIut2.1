@@ -10,7 +10,7 @@ class Deseins {
     	GridLayout gest = new GridLayout(5,5);
     	fen.setLayout(gest);
     	for(int i = 0;i<25;i++){
-    		 new Dessin();
+    		 
     		fen.add(new Dessin());
     	}
     	
