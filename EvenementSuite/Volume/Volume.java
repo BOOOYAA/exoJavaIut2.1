@@ -3,10 +3,16 @@ import java.awt.*;
 import java.awt.event.*;
 public class Volume extends JComponent{
 	private int a;
-	
+	private int r;
+    private int g;
+    private int b;
+
 	public Volume(){
 		super();
 		this.a=(int)(Math.random() * 10);
+        this.r=158;
+        this.g=14;
+        this.b=64;
 	}
 
 	@Override
@@ -18,12 +24,16 @@ public class Volume extends JComponent{
       		sndpinceau.setColor(this.getBackground());
       		sndpinceau.fillRect(0, 0, this.getWidth(), this.getHeight());
 		}
-		sndpinceau.setColor(Color.BLACK);
+        int nuance=20;
+		sndpinceau.setColor(new Color(nuance,nuance,nuance));
       	sndpinceau.fillRect(0, 0, this.getWidth(), this.getHeight());	
 
     	for (int i=0;i<10;i++) {
+           /* this.r=(int)(Math.random() * 255);
+            this.g=(int)(Math.random() * 255);
+            this.b=(int)(Math.random() * 255);*/ //sensations garentit
     		if (i<=this.a)
-    			sndpinceau.setColor(Color.RED);
+    			sndpinceau.setColor(new Color(r,g,b));
     		else
     			sndpinceau.setColor(Color.WHITE);
     		
@@ -31,12 +41,13 @@ public class Volume extends JComponent{
     	}
     }
     public void alteration(int x){
+        
     	if(x<0){
             if(a>=0)
     		  this.a--;
         }
         else{
-            if(a<11)
+            if(a<9)
                 this.a++;
         }
     	   
