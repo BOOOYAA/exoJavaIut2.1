@@ -33,4 +33,8 @@ class Fenetre extends JFrame {
     public JLabel envoie(int x){
     	return this.tab[x];
     }
+    public void cleaning(){
+    	for (int i=0;i<10;i++)
+			tab[i].setBackground(Color.WHITE);
+    }
 } 

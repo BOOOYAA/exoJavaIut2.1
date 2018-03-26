@@ -9,7 +9,10 @@ public class EcouteurRoueSouris implements MouseWheelListener {
 	}
 
 	public void mouseWheelMoved(MouseWheelEvent evenement){
-		this.fenetre.lePont(evenement.getWheelRotation());
+		if(evenement.getWheelRotation()<0)
+			this.fenetre.lePont(-1);
+		else
+			this.fenetre.lePont(1);
 		System.out.println(evenement.getWheelRotation());
 	}
 }

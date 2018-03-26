@@ -31,8 +31,16 @@ public class Volume extends JComponent{
     	}
     }
     public void alteration(int x){
-    	if(this.a-x>0 && this.a+x<11)
-    		this.a=+(x);
-    	this.repaint();
+    	if(x<0){
+            if(a>=0)
+    		  this.a--;
+        }
+        else{
+            if(a<11)
+                this.a++;
+        }
+    	   
+           this.repaint();
+           System.out.println("a :"+this.a);
     }	
 }
